@@ -1,0 +1,26 @@
+.wrap{
+	padding:20px;
+	background:#25273c;
+	display:flex;
+	justify-content: space-between;
+}
+
+.btn{
+	/* background-color:transparent; */
+	background:none;
+	border:none;
+	color:#999999;
+	font-family: 'Cafe24SsurroundAir', sans-serif;
+	font-size:12px;
+	line-height:25px;
+}
+
+.left{
+	color:#999999;
+	font-size:12px;
+	line-height:25px;
+}
+
+.filter{
+	display:flex;
+}

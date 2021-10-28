@@ -135,5 +135,16 @@ index.js => index.html에 렌더링된 내용 표시
 - HTML, CSS 렌더링
     - HTML, CSS 일반개발 : 전체 구조 파악이 용이
     - React Component로 분해
+    - CSS code중에 폰트설정, reset css 코드 처럼 전체 적용되어야 하는 css는 전역 설정 : App.css에 작성
+```
+header : TodoHeader.js
+
+contents : TodoContents.js
+    - list container : TodoList.js
+        - list item : TodoItem.js
+    - status : TodoStatus.js
+
+footer : TodoFooter.js
+```
 
 - JS 기능 구현
