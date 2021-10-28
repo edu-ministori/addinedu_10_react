@@ -33,7 +33,7 @@
     - node_modules : node module 저장된 폴더
     - public : 최종으로 화면에 보이는 리소스가 저장되는 폴더
         - index.html : 브라우저에서 최종 표시되는 메인 페이지
-            - 서버에서 기본 적용되는 파일 : URL에 파일이름이 포함되지 않아도 됨
+            - index : 서버에서 기본 적용되는 파일이름 : URL에 파일이름이 포함되지 않아도 됨
     - src : 실제로 프로그래밍하는 Component 파일들이 저장되는 폴더
         - Component 내용이 HTML Contents / Structure로 렌더링됨
         - index.js : App.js의 내용이 모이는 파일 => index.html 파일로 렌더링
@@ -52,7 +52,7 @@ index.js => index.html에 렌더링된 내용 표시
 - 공식 홈페이지 : https://ko.reactjs.org/
 
 - 개발방식 비교
-    - 일반 개발 : HTML, CSS, JS 3가지 언어의 밸런스를 유지하고 사용해서 개발
+    - 일반 개발 : HTML, CSS, JS 3가지 언어의 밸런스를 유지하고 사용해서 정적 개발
     - React 개발
         - 사용자 인터페이스(UI)를 만들기 위한 JavaScript 라이브러리
         - React 라이브러리와 javascript 언어를 사용해서 동적 개발
@@ -110,3 +110,30 @@ index.js => index.html에 렌더링된 내용 표시
 - props 객체 데이터의 값을 전달할 때 구조 분해 할당 사용하는 형태
 
 - props.children : component 내용을 다른 component에 전체 포함시킬 때 사용
+
+## 조건부 렌더링
+
+- 조건 결과(true/false)에 따라 다른 HTML Element를 렌더링
+
+## React에서 CSS를 작성하는 방식
+
+- CSS-in-JS
+    - JS파일에 CSS를 포함
+    - Component에 css를 같이 작성
+    - 해당 Component의 스타일만 적용
+    - Component 별로 css 관리가 용이
+    - 공통 사용할 수 없음
+    - css에서 상태변화 구분을 할 수 없음
+    - 구현 방식 : styled-component
+
+- CSS-in-CSS
+    - CSS 파일을 따로 생성해서 CSS구현
+    - 구현방식 : CSS Module
+
+## Todo App mini project
+
+- HTML, CSS 렌더링
+    - HTML, CSS 일반개발 : 전체 구조 파악이 용이
+    - React Component로 분해
+
+- JS 기능 구현
