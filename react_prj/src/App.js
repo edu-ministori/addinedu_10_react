@@ -14,7 +14,11 @@ import Hello01 from './Hello01';
 // import Props03 from './Props03';
 // import Props04 from './Props04';
 // import Props05 from './Props05';
-import Props06 from './Props06';
+// import Props06 from './Props06';
+// import Condition01 from './Condition01';
+// import Condition02 from './Condition02';
+// import Condition03 from './Condition03';
+import Layout from './Layout';
 
 
 /*
@@ -39,7 +43,11 @@ function App() {
       {/* <Props03 /> */}
       {/* <Props04 /> */}
       {/* <Props05 name="홍길동" email="hong@email.com" /> */}
-      <Props06 />
+      {/* <Props06 /> */}
+      {/* <Condition01 /> */}
+      {/* <Condition02 /> */}
+      {/* <Condition03 /> */}
+      <Layout />
     </React.Fragment>
   );
 }

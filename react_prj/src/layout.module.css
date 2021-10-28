@@ -1,0 +1,45 @@
+#wrap{
+    width:300px;
+}
+
+.wrap{
+    border:1px solid red;
+    padding:10px;
+}
+
+.header{
+    height:50px;
+    background-color:pink;
+}
+
+.nav{
+    height:50px;
+    background-color:skyblue;
+}
+
+.contents-wrap{
+    display:flex;
+}
+
+.section{
+    width:200px;
+    height:50px;
+    background-color:yellowgreen;
+}
+
+.article{
+    width:200px;
+    height:50px;
+    background-color:blueviolet;
+}
+
+.aside{
+    width:100px;
+    height:100px;
+    background-color:coral;
+}
+
+.footer{
+    height:50px;
+    background-color:cornflowerblue;
+}
