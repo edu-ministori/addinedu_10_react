@@ -1,6 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+// import './App.css';
+
 import TodoHeader from './todo/TodoHeader';
 import TodoContents from './todo/TodoContents';
 import TodoList from './todo/TodoList';

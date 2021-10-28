@@ -130,6 +130,52 @@ index.js => index.html에 렌더링된 내용 표시
     - CSS 파일을 따로 생성해서 CSS구현
     - 구현방식 : CSS Module
 
+## React Event
+
+- event와 실행 함수를 연결
+- 일반 javascript에서는 addEventListener 이벤트 핸들러 사용
+- 이벤트가 발생되는 Element에 직접 작성 : 인라인 방식 작성
+- 이벤트와 함수를 연결했을 때 이벤트 발생시 함수가 실행되어 데이터는 없데이트 됨
+    => Hook을 사용하지 않으면 리렌더링이 되지 않아 웹페이지에는 반영되지 않음
+
+```
+on이벤트종류 = {함수이름}
+
+Ex) onClick={myFunction}
+```
+
+## React Hook
+
+- Hook은 상태값 관리와 여러 React 기능을 사용할 수 있음
+- 상태값 관리
+    - 상태 변경 : 렌더링 된 페이지에서 상태가 변경되는 것 => 데이터 업데이트
+    - 데이터가 변경/업데이트 되었을 때 => 변경된 데이터가 화면에 반영
+    - 첫 렌더링 => 데이터 변경 => 리렌더링(변경된 데이터가 화면에 반영되도록 다시 렌더링)
+
+## Hook API
+
+### useState
+
+- 초기값을 지정한 후, 그 값을 사용해서 상태를 표현하는 값(데이터), 그 값을 설정(지정)하는 함수를 반환함
+
+```
+useState() => 값, set 함수를 반환
+
+let stateFunction = useState(초기값);
+
+stateFunction[0] = 상태 값(변수)
+stateFunction[1] = 상태 set 함수
+
+// 구조 분해 할당
+
+const [state, setState] = useState(initState);
+
+state : initState 사용해서 값이 저장되는 변수
+setState : 값을 지정(변수에 값을 저장)하는 함수
+initState : 초기값
+```
+
+
 ## Todo App mini project
 
 - HTML, CSS 렌더링
