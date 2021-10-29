@@ -205,6 +205,10 @@ initState : 초기값
 
 ### 배열 데이터 삭제(Delete)
 
+- 배열 데이터가 변경되기 때문에 create와 연계해서 상태관리 필요함
+
+- filter 함수를 사용해서 삭제할 데이터를 제외한 나머지 데이터를 사용해서 새로운 배열을 생성
+
 ## Todo App mini project
 
 - HTML, CSS 렌더링

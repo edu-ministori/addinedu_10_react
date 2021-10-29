@@ -1,9 +1,10 @@
 import { useState, useRef } from 'react';
 
 import Array05List from './Array05List';
+import Array05Create from './Array05Create';
 
 function Array05(){
-    const carArray = [
+    const [carArray, setCarArray] = useState([
         {
             id : 1,
             carname : 'Fiat',
@@ -19,7 +20,7 @@ function Array05(){
             carname : 'Kia',
             color : 'silver'
         }
-    ];
+    ]);
 
     const [inputText, setInputText] = useState({
         carname : '',
@@ -48,19 +49,31 @@ function Array05(){
         }
 
         // 배열에 새 데이터를 추가
+        setCarArray([...carArray, car]);
+
+        // input reset
+        setInputText({
+            carname : '',
+            color : ''
+        });
+
+        // 다음 데이터 추가될 때 인덱스 번호
+        nextIndex.current++;
+    }
+
+    const removeObject = (id) => {
+        // car.id 값을 사용해서 일치하지 않는 배열(삭제하지 않는 배열) 요소들을 추출하여 새로운 배열을 생성
+        // 배열.filter(function(배열원소){실행코드:비교구문})
+
+        setCarArray(carArray.filter(function(car){
+            return( car.id !== id )
+        }));
     }
 
     return(
         <>
-            <div>
-                <input type="text" name="carname" onChange={updateObject} />
-                <input type="text" name="color" onChange={updateObject} />
-                <button type="button" onCLick={createObject}>등록</button>
-                <div>{carname} {color}</div>
-            </div>
-
-            <Array05List array={carArray} />
-
+            <Array05Create updateObject={updateObject} createObject={createObject} carname={carname} color={color} />
+            <Array05List array={carArray} removeObject={removeObject} />
         </>
     );
 }
