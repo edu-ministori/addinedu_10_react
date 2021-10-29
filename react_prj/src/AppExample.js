@@ -23,7 +23,12 @@ import React from 'react';
 // import HookUseState01 from './HookUseState01';
 // import HookUseState02 from './HookUseState02';
 // import HookUseState03 from './HookUseState03';
-import HookUseState04 from './HookUseState04';
+// import HookUseState04 from './HookUseState04';
+// import HookUseRef from './HookUseRef';
+// import Array01 from './Array01';
+// import Array02 from './Array02';
+// import Array03 from './Array03';
+import Array04 from './Array04';
 
 
 /*
@@ -57,7 +62,12 @@ function App() {
       {/* <HookUseState01 /> */}
       {/* <HookUseState02 /> */}
       {/* <HookUseState03 /> */}
-      <HookUseState04 />
+      {/* <HookUseState04 /> */}
+      {/* <HookUseRef /> */}
+      {/* <Array01 /> */}
+      {/* <Array02 /> */}
+      {/* <Array03 /> */}
+      <Array04 />
     </React.Fragment>
   );
 }
