@@ -1,10 +1,10 @@
 import status from './todostatus.module.css';
 
-function TodoStatus(){
+function TodoStatus({ number }){
     return(
         <section className="section">
             <div className={status.wrap}>
-                <div className={status.left}>10개 남음</div>
+                <div className={status.left}>{number}개 남음</div>
                 <div className={status.filter}>
                     <button type="button" className={status.btn}>전체목록</button>
                     <button type="button" className={status.btn}>남은목록</button>

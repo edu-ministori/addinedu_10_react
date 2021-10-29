@@ -33,6 +33,8 @@ function AppTodo() {
 
   const nextIndex = useRef(4);
 
+  const [number, setNumber] = useState(3);
+
   const updateContent = (event) => {
     const {name, value} = event.target;
 
@@ -55,6 +57,8 @@ function AppTodo() {
     });
 
     nextIndex.current++;
+
+    setNumber(number + 1);
   }
 
   const removeContent = (id) => {
@@ -63,6 +67,8 @@ function AppTodo() {
       return ( todo.id !== id )
     }));
 
+    setNumber(number - 1);
+
   }
   
   return (
@@ -70,7 +76,7 @@ function AppTodo() {
       <TodoHeader createContent={createContent} updateContent={updateContent} content={content} />
       <TodoContents>
         <TodoList array={todoArray} removeContent={removeContent} />
-        <TodoStatus />
+        <TodoStatus number={number} />
       </TodoContents>
       <TodoFooter />
     </>
