@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom';
 // import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
-import AppTodo from './AppTodo';
-// import AppExample from './AppExample';
+// import AppTodo from './AppTodo';
+import AppExample from './AppExample';
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
-    <AppTodo />
-    {/* <AppExample /> */}
+    {/* <AppTodo /> */}
+    <AppExample />
   </React.StrictMode>,
   document.getElementById('root')
 );

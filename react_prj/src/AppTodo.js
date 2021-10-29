@@ -24,16 +24,13 @@ function AppTodo() {
       id : 3,
       content : '할일 todo 3'
     }
-
   ];
 
   return (
     <>
       <TodoHeader />
       <TodoContents>
-        <TodoList>
-          <TodoItem />
-        </TodoList>
+        <TodoList array={todoArray} />
         <TodoStatus />
       </TodoContents>
       <TodoFooter />

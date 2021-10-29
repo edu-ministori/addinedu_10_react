@@ -28,7 +28,8 @@ import React from 'react';
 // import Array01 from './Array01';
 // import Array02 from './Array02';
 // import Array03 from './Array03';
-import Array04 from './Array04';
+// import Array04 from './Array04';
+import Array05 from './Array05';
 
 
 /*
@@ -67,7 +68,8 @@ function App() {
       {/* <Array01 /> */}
       {/* <Array02 /> */}
       {/* <Array03 /> */}
-      <Array04 />
+      {/* <Array04 /> */}
+      <Array05 />
     </React.Fragment>
   );
 }
