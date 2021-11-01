@@ -7,18 +7,24 @@ function Array05(){
     const [carArray, setCarArray] = useState([
         {
             id : 1,
+            checked : true,
             carname : 'Fiat',
-            color : 'white'
+            color : 'white',
+            show : true
         },
         {
             id : 2,
+            checked : false,
             carname : 'Hyundai',
-            color : 'black'
+            color : 'black',
+            show : true
         },
         {
             id : 3,
+            checked : false,
             carname : 'Kia',
-            color : 'silver'
+            color : 'silver',
+            show : true
         }
     ]);
 
@@ -40,10 +46,19 @@ function Array05(){
         });
     }
 
+    const checkBox = (id) => {
+        setCarArray(
+            carArray.map(
+                car => car.id === id ? {...car, checked: !car.checked } : car
+            )
+        );
+    }
+
     const createObject = () => {
         // 객체 배열에 추가하기 위한 데이터
         const car = {
             id : nextIndex.current,
+            checked : false,
             carname : carname,
             color : color
         }
@@ -70,10 +85,37 @@ function Array05(){
         }));
     }
 
+    const showCheck = ()=>{
+        setCarArray(
+            carArray.map(
+                car => car.checked === true ? {...car, show : true } : {...car, show : false}
+            )
+        );
+    }
+
+    const showUnCheck = ()=>{
+        setCarArray(
+            carArray.map(
+                car => car.checked === false ? {...car, show : true } : {...car, show : false}
+            )
+        );
+    }
+
+    const showAll = ()=>{
+        setCarArray(
+            carArray.map(
+                car => car = {...car, show : true }
+            )
+        );
+    }
+
     return(
         <>
             <Array05Create updateObject={updateObject} createObject={createObject} carname={carname} color={color} />
-            <Array05List array={carArray} removeObject={removeObject} />
+            <Array05List array={carArray} removeObject={removeObject} checkBox={checkBox} />
+            <button type="button" onClick={showCheck}>Check Show</button>
+            <button type="button" onClick={showUnCheck}>UnCheck Show</button>
+            <button type="button" onClick={showAll}>All Show</button>
         </>
     );
 }

@@ -13,6 +13,11 @@
 	font-family: 'Cafe24SsurroundAir', sans-serif;
 	font-size:12px;
 	line-height:25px;
+	cursor:pointer;
+}
+
+.btn:hover{
+	color:skyblue;
 }
 
 .left{

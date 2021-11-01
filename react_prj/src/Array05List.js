@@ -1,7 +1,8 @@
-function ListItem({ value, removeObject }){
+function ListItem({ value, removeObject, checkBox }){
     return(
-        <li>
-            <span>{value.id} - </span>
+        <li className={value.show ? '' : 'hide'}>
+            <span><input type="checkbox" onChange={()=>{checkBox(value.id)}} checked={value.checked} /> - </span>
+            <span>{value.checked + ''} {value.id} - </span>
             <span>{value.carname} - </span>
             <span>{value.color} - </span>
             <button type="button" onClick={()=>{removeObject(value.id)}} >삭제</button>
@@ -9,10 +10,10 @@ function ListItem({ value, removeObject }){
     );
 }
 
-function Array05List({ array, removeObject }){
+function Array05List({ array, removeObject, checkBox }){
     return(
         <ul>
-            {array.map( car => <ListItem value={car} key={car.id} removeObject={removeObject} /> )}
+            {array.map( car => <ListItem value={car} key={car.id} removeObject={removeObject} checkBox={checkBox} /> )}
         </ul>
     );
 }

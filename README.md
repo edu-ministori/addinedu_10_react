@@ -227,3 +227,21 @@ footer : TodoFooter.js
 ```
 
 - JS 기능 구현
+
+```
+header
+- 항목 추가 기능 : createContent
+- 인풋 텍스트 입력 내용을 업데이트 : updateContent
+- 항목 개수 표시 업데이트
+
+contents
+    - list container
+        - list item
+            - 항목 삭제 : removeContent
+            - 항목 개수 표시 업데이트
+            - 체크박스 상태관리
+    - status
+        - 
+
+footer
+```

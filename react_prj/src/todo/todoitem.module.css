@@ -5,6 +5,10 @@
 	border-bottom:1px solid #555;
 }
 
+.hide{
+	display:none;
+}
+
 .item-check{
 	width:25px;
 	height:25px;
